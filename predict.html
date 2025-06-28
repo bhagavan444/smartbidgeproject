@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict | Smart Sorting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <a href="/">Home</a>
+    <a href="/predict">Predict</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </header>
+
+  <section class="section predict-section">
+    <div class="card">
+      <h2>Upload an Image</h2>
+      <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Check Freshness</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

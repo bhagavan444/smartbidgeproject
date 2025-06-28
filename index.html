@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fruit & Vegetable Freshness Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <!-- ▸ NAVBAR ------------------------------- -->
+    <header class="navbar">
+        <a href="/">Home</a>
+        <a href="/">Predict</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <!-- ▸ HERO / UPLOAD CARD ------------------- -->
+    <main class="hero">
+        <div class="card">
+            <h1>Smart Sorting</h1>
+            <p class="subtitle">Upload an image to see if your produce is <em>Fresh</em> or <em>Rotten</em>.</p>
+
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required />
+                <button type="submit">Check Freshness</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
