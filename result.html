@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p><strong>Label:</strong> {{ label }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+
+        <img src="{{ url_for('uploaded_file', filename=image) }}" alt="Uploaded Image">
+
+        <br>
+        <a href="/">Upload another image</a>
+    </div>
+</body>
+</html>

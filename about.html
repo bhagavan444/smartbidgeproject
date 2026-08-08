@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Smart Sorting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <a href="/">Home</a>
+    <a href="/predict">Predict</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </header>
+
+  <section class="section about-section">
+    <div class="card full">
+      <h2>About the Project</h2>
+      <p>This deep learning project uses transfer learning with MobileNetV2 to classify images of fruits and vegetables. The model is trained to identify whether the produce is fresh or rotten, helping reduce food waste and improve supply chain management.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="card">
+        <h3>Bhagavan</h3>
+        <p>Frontend & Model Integration</p>
+      </div>
+      <div class="card">
+        <h3> M Dhana Pujitha</h3>
+        <p>Backend Developer</p>
+      </div>
+      <div class="card">
+        <h3> Jyothi Jakkamsetti</h3>
+        <p>Dataset Collection & Preprocessing</p>
+      </div>
+      <div class="card">
+        <h3>Seelam Divya Sree</h3>
+        <p>UI/UX & Documentation</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
