@@ -1,0 +1,145 @@
+/* ------- Global Layout & Background --------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url("/static/bg.jpg") no-repeat center center/cover;
+    color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ------- Navbar ----------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 14px 0;
+    z-index: 999;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ddd;
+    transform: scale(1.05);
+}
+
+/* ------- Sections --------------------------- */
+.section {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------- Cards ------------------------------ */
+.card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card.full {
+    max-width: 900px;
+    text-align: left;
+}
+
+.card h1, .card h2, .card h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* ------- Team Grid -------------------------- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ------- Form ------------------------------- */
+input[type="file"] {
+    margin-top: 15px;
+    color: #ddd;
+}
+
+button,
+.btn-back {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn-back:hover {
+    background-color: #218838;
+}
+
+/* ------- Image Styling ---------------------- */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ------- Prediction Result ------------------ */
+.label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.confidence {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* ------- Responsive Padding ----------------- */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .card, .card.full {
+        padding: 20px;
+    }
+}
